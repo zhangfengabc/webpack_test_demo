@@ -1,0 +1,84 @@
+掌握webpack中核心配置
+loader的编写
+test:匹配处理文件的扩展名的正则表达式
+use:loader 名称，就是你要使用的模块的名称
+include/exclude: 手动指定必须要处理的文件夹/屏蔽不需要处理的文件夹
+options: 为loader提供额外的设置选项
+
+
+
+
+
+package.json
+"dev":"webpack --env.development --config ./webpack.base.js"
+"build":"webpack --env.production --config ./webpack.base.js"
+
+webpack-merge
+merge dev 和prod代码
+
+webpack-dev-server
+启动一个服务
+
+clean-webpack-plugin
+清空之前打包的文件,需要解构赋值
+
+html-webpack-plugin
+把打包后的文件，自动引入到html中
+
+
+
+
+
+
+
+安装
+css-loader style-loader less less-loader 
+
+抽离css 样式
+mini-css-extract-plugin
+
+文件指纹
+hash 整个项目的hash值
+chunkHash：根据入口产生的hash值
+contentHash：根据每个文件的内容产生的hash值
+
+给css加前缀
+postcss-loader 
+autoprefixer
+
+需要在loader里面配置实用
+创建postcss.config.js 
+创建.browserslistrc
+
+
+ PostCSS plugin autoprefixer requires PostCSS 8. Update PostCSS or downgrade this plugin.
+ 报这个错需要降低autoprefixer的版本
+ npm install autoprefixer@8 -D 
+
+
+
+处理图片
+file-loader 将图片打包，并且将打包后的图片返回，拷贝图片
+url-loader 当图片小于limit的时候会将图片转换成base64编码，大于limit参数时会使用file-loader 进行拷贝
+
+处理html下的图片文件
+html-withimg-loader
+
+
+安装解析es6
+babel-loader webpack和babel的桥梁
+@babel/core 是不babel的核心模块
+@babel/preset-env es6转换成es5的插件集合
+
+
+
+优化，可以提升构建速度，减少冗余代码
+@babel/plugin-transform-runtime
+@babel/runtime
+
+创建一个.babelrc文件
+
+添加eslint
+
+
+

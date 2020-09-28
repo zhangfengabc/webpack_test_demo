@@ -1,0 +1,22 @@
+body {
+  background-color: #eee;
+  font-size: 20px;
+  color: red;
+}
+body p {
+  background: #333333;
+  -webkit-transform: translate(30deg);
+     -moz-transform: translate(30deg);
+      -ms-transform: translate(30deg);
+       -o-transform: translate(30deg);
+          transform: translate(30deg);
+}
+body .logo {
+  width: 100px;
+  height: 100px;
+  background: url(img/headimg.png) no-repeat;
+  -webkit-background-size: 100px auto;
+     -moz-background-size: 100px auto;
+          background-size: 100px auto;
+}
+
